@@ -1,0 +1,443 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+//colors
+$mainbg: #24252A;
+$btnBlue: #0088A9;
+$offWhite: #EDF0F1;
+$subText: #b2b2b2;
+
+*{
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+//header
+
+header{
+  background-color: $mainbg;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+  li, a, button{
+    font-weight: 500;
+    font-size: 16px;
+    color: $offWhite;
+    text-decoration: none;
+  }
+  .logo{
+    cursor: pointer;
+    height: 50px;
+    width: auto;
+  }
+  .nav__links{
+    list-style: none;
+  }
+  .nav__links li{
+    display: inline-block;
+    padding: 0px 20px;
+  }
+  .nav__links li a{
+    transition: all 0.3s ease 0s;
+  }
+  .nav__links li a:hover{
+    color: $btnBlue;
+  }
+  button{
+    padding: 9px 25px;
+    background-color: rgba($btnBlue, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+  }
+  button:hover{
+    background-color: rgba($btnBlue, 0.8);
+  }
+}
+
+//backdrop
+.backdrop{
+  height: 500px;
+  background-image: url('../assets/kaijukits.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+//info
+.info{
+  display: flex;  
+  flex-direction: column;
+  height: 400px;
+  background-color: $offWhite;
+  padding: 40px;
+  box-shadow: 
+  inset 0px 11px 8px -10px #000000,
+  inset 0px -11px 8px -10px #000000; 
+  h1{
+    font-size: 40px;
+    font-weight: bolder;
+  }
+  hr{
+    border: 3px solid $btnBlue; 
+      border-radius: 5px;
+      width: 40%;       
+      margin: 5px;
+  }
+  p{
+    padding-top: 40px;
+    letter-spacing: 2px;
+  }
+  span{
+    color: $btnBlue;
+    font-size: larger;
+    font-weight: bolder;
+    letter-spacing: 2px;
+  }
+  img{
+    align-self: flex-end;
+    height: 90px;
+    width: auto;
+    opacity: 20%;
+  }
+}
+
+//main
+main{
+  background: $mainbg;
+ 
+  .maintitles{
+    display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px 0;
+    h1{
+      font-size: 50px;
+      color: $offWhite;
+    }
+    h6{
+      font-size: xx-small;
+      letter-spacing: 6px;
+      color: $offWhite;
+    }
+    hr{
+      border: 3px solid $btnBlue; 
+      border-radius: 5px;
+      width: 37%;       
+      margin: 5px;
+    }
+  }
+  .filterButtons{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    background: $offWhite;
+    width: 55%;
+    border-radius: 50px;
+  
+    
+    .filter{
+      color: $mainbg;
+      background: none;
+      cursor: pointer;
+      border: 1px solid $offWhite;
+      display: inline-block;
+      margin: 10px 30px;
+      font-size: 16px;
+      letter-spacing: 2px;
+      padding: 10px;
+    }
+    .filter:hover{
+      color: $btnBlue;
+      border: 1px $btnBlue solid;
+      border-radius: 25px;
+    }
+  }
+  
+  
+  .gallery{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 10px 0;
+    padding-bottom: 50px;
+    background-image: url('../assets/loginBg.png');
+    h3{
+      text-align: center;
+      font-size: 30px;
+      margin: 0;
+      padding-top: 10px;
+      color: $offWhite;
+    }
+    h6{
+      text-align: center;
+      font-size: 20px;
+      margin: 0;
+      padding: 10px;
+      color: $btnBlue;
+    }
+    p{
+      color: $subText;
+    }
+    .content{
+      width: 20%;
+      margin: 15px;
+      box-sizing: border-box;
+      float: left;
+      text-align: center;
+      border-radius: 20px;
+      cursor: pointer;
+      padding-top: 10px;
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+      transition: .4s;
+      background: transparent;
+      backdrop-filter: blur(6px);
+      border: 1px solid $offWhite;
+    }
+    .content:hover{
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+      transform: translate(0px, -8px);
+    }
+    img{
+      width: 200px;
+      height: 200px;
+      text-align: center;
+      margin: 0 auto;
+      display: block;
+    }
+    button{
+      text-align: center;
+      font-size: 24px;
+      color: $offWhite;
+      width: 100%;
+      padding: 15px;
+      border: 0;
+      outline: none;
+      cursor: pointer;
+      margin-top: 5px;
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+    .add{
+      background: transparent;
+      border: 1px solid $offWhite;
+    }
+    .add:hover{
+      background-color: rgba($btnBlue, 0.8);
+    }
+    @media(max-width:1000px){
+      .content{
+        width: 45%;
+      }
+    }
+    @media(max-width:750px){
+      .content{
+        width: 100%;
+      }
+    }
+  }
+  
+}
+
+//footer
+footer{
+  height: 200px;
+  background-color: $offWhite;
+  box-shadow: 
+  inset 0px 11px 30px -10px #000000;
+  display: flex;
+  padding: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////    LOGIN    PAGE     //////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////
+/// 
+/// 
+.login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  background-color: $btnBlue;
+  background-image: url('../assets/loginBg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  .wrapper{
+    width: 420px;
+    background: transparent;
+    color: $offWhite;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid rgba($offWhite, 0.2);
+    backdrop-filter: blur(5px);
+    padding: 30px 40px;
+    .input-box{
+      width: 100%;
+      height: 50px;
+      margin: 30px 0;
+      input{
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        border: none;
+        outline: none;
+        border: 2px solid $btnBlue;
+        border-radius: 40px;
+
+        padding: 20px 45px 20px 20px;
+        ::placeholder{
+          color: $offWhite;
+        }
+      }
+      textarea{
+        width: 100%;
+        height: 150%;
+        background: transparent;
+        border: none;
+        outline: none;
+        border: 2px solid $btnBlue;
+        border-radius: 40px;
+        padding: 20px 45px 20px 20px;
+        
+      }
+    }
+    .remember-forgot{
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      margin: -15px 0 15px;
+      label{
+        input{
+          accent-color: $offWhite;
+          margin-right: 3px;
+        }
+      }
+      a{
+        color: $offWhite;
+        text-decoration: none;
+        
+      }
+      a:hover{
+        text-decoration: underline;
+        color: $btnBlue;
+      }
+    }
+    .btn{
+      width: 100%;
+      height: 45px;
+      background: $offWhite;
+      border: none;
+      outline: none;
+      border-radius: 40px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+      cursor: pointer;
+      font-size: 16px;
+      color: $mainbg;
+      font-weight: 600;
+    }
+    
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////    PRODUCT    PAGE     ////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////
+/// 
+/// 
+section{
+  background-image: url('../assets/loginBg.png');
+  height: 80vh;
+  .container{
+    display: flex;
+    justify-content: space-between;
+    max-width: 75%;
+    margin: auto;
+    height: 70vh;
+    padding: 20px;
+    background: transparent;
+    backdrop-filter: blur(6px);
+    box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, .3);
+    border: 1px solid $offWhite;
+    border-radius: 50px;
+    .left{
+      width: 50%;
+      .main_image{
+        img{
+          width: auto;
+          height: 450px;
+          border-radius: 50px;
+        }
+       
+      }
+    }
+    .right{
+      width: 50%;
+      
+      h1{
+        color: $offWhite;
+        padding-top: 20px;
+        font-size: 50px;
+      }
+      h2{
+        color: $btnBlue;
+        font-size: 30px;
+        padding-top: 20px;
+      }
+      h5{
+        padding-top: 20px;
+        color: $btnBlue;
+      }
+      p{
+        padding-top: 20px;
+        color: $offWhite;
+      }
+      span{
+        padding: 20px;
+        color: $offWhite;
+      }
+      .btn{
+        
+        width: 100%;
+        height: 45px;
+        background: $offWhite;
+        border: none;
+        outline: none;
+        border-radius: 40px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+        cursor: pointer;
+        font-size: 16px;
+        color: $mainbg;
+        font-weight: 600;
+        
+      }
+    }
+    
+    
+    
+  }
+  .amount{
+    width: 80px;
+    height: 40px;
+    margin-bottom: 25px;
+    background: transparent;
+    color: $offWhite;
+    border: 1px solid $btnBlue;
+    border-radius: 5px;
+    padding: 20px;
+  }
+  
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////    CONTACT    PAGE     ////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////
+/// 
+/// 
